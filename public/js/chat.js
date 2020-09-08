@@ -17,10 +17,14 @@ new Vue({
         messages: []
     },
     methods: {
+        focusOnSender: function(){
+            $("#message-text").focus()
+        },
         getMessages: function(){
             axios.get(`/api/get_messages/${this.roomId}`).then((res) => {
                 this.messages = res.data
             })
+            this.focusOnSender()
         },
         poll: function(){
             let pollAgain = true

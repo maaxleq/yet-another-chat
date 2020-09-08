@@ -1,0 +1,55 @@
+#name-input {
+    display: block;
+    width: 65%;
+    max-width: 65%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 3px solid #4CAF50;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px;
+    background-color: #E8F5E9;
+    color: #424242;
+    opacity: 70%;
+    box-shadow: none;
+    font-family: "Syne";
+    transition: 0.5s;
+}
+
+#name-input.tried:invalid {
+    border-color: #F44336;
+}
+
+#name-input::placeholder {
+    color: #424242;
+    opacity: 75%;
+}
+
+#name-input:hover::placeholder, #name-input:focus::placeholder {
+    color: #424242;
+}
+
+#name-input:hover, #name-input:focus {
+    width: 75%;
+    opacity: 100%;
+}
+
+#go-button {
+    margin: 0 auto;
+    min-width: max-content;
+    width: 30%;
+}
+
+#validation > * {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+#mail {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

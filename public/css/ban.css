@@ -1,0 +1,23 @@
+#uh-oh {
+    text-align: center;
+    margin: 4rem auto;
+    font-family: "Grandstander";
+    font-size: 3rem;
+}
+
+img {
+    display: block;
+    width: 50%;
+    margin: 4rem auto;
+}
+
+#reason {
+    width: 50%;
+    display: block;
+    margin: 4rem auto;
+}
+
+#why, #because {
+    font-family: Syne;
+    font-size: 2rem;
+}

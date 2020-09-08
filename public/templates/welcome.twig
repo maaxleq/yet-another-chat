@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="/css/welcome">
+{% endblock %}
+
+{% block content %}
+    <form method="POST" action="/dashboard">
+        <div id="main-column">
+            <yac-title-set v-bind:yac-titles="[
+            {
+                titleHead: 'y',
+                titleTail: 'et'
+            },
+            {
+                titleHead: 'a',
+                titleTail: 'nother'
+            },
+            {
+                titleHead: 'c',
+                titleTail: 'hat'
+            }
+        ]"></yac-title-set>
+            <div id="validation" v-pre>
+                <input v-model="name" v-bind:class="{ tried: buttonClicked }" name="name" id="name-input" placeholder="Enter your name" autocomplete="off" required autofocus>
+                <button id="go-button" class="yac-button" v-on:click="clickFormButton">LET'S GO</button>
+            </div>
+            <img id="mail" src="/svg/icon_mail">
+        </div>
+    </form>
+{% endblock %}
+
+{% block js %}
+    <script src="/js/welcome" type="module"></script>
+{% endblock %}

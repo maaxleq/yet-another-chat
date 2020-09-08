@@ -1,0 +1,244 @@
+@font-face {
+    font-family: "Syne";
+    src: url(/font/Syne-Regular);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(/font/Poppins-Light);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Grandstander";
+    src: url(/font/Grandstander-Regular);
+    font-weight: 400;
+}
+
+html {
+    font-size: 100%;
+    background-color: #E8F5E9;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+#main-column {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+#main-column > * {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+input, textarea {
+    outline: none;
+}
+
+.yac-title-set {
+    display: flex;
+    justify-content: center;
+    word-break: break-all;
+}
+
+.yac-title-set p {
+    margin: 0;
+    font-family: "Grandstander";
+    font-size: 4rem;
+    transition: 0.5s;
+}
+
+.yac-title-set span {
+    color: #4CAF50;
+}
+
+.yac-title {
+    display: flex;
+    justify-content: center;
+    word-break: break-all;
+}
+
+.yac-title p {
+    margin: 0;
+    font-family: "Grandstander";
+    font-size: 4rem;
+    transition: 0.5s;
+}
+
+.yac-title span {
+    color: #4CAF50;
+}
+
+.yac-button {
+    display: block;
+    font-family: "Syne";
+    border: 2px solid #4CAF50;
+    opacity: 70%;
+    border-radius: 5px;
+    background-color: inherit;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: 0.2s;
+    box-shadow: 5px 5px #1B5E20;
+    outline: none;
+}
+
+.yac-button:hover {
+    transform: translate(5px,5px);
+    box-shadow: none;
+    opacity: 100%;
+}
+
+.yac-button:focus {
+    opacity: 100%;
+}
+
+/*** WORMS ***/
+
+.worm-container {
+    background-color: #80CBC4;
+    position: fixed;
+    height: calc(20vh - 5px);
+    width: 25vw;
+}
+
+#worms-left .worm-container {
+    margin-right: calc((20vh - 5px) / 2);
+}
+
+#worms-right .worm-container {
+    margin-left: calc((20vh - 5px) / 2);
+}
+
+#worms-left .worm-1-container {
+    top: 0;
+    right: 75vw;
+}
+
+#worms-left .worm-2-container {
+    top: 20vh;
+    right: 80vw;
+}
+
+#worms-left .worm-3-container {
+    top: 40vh;
+    right: 85vw;
+}
+
+#worms-left .worm-4-container {
+    top: 60vh;
+    right: 90vw;
+}
+
+#worms-left .worm-5-container {
+    top: 80vh;
+    right: 95vw;
+}
+
+#worms-right .worm-1-container {
+    top: 0;
+    left: 95vw;
+}
+
+#worms-right .worm-2-container {
+    top: 20vh;
+    left: 90vw;
+}
+
+#worms-right .worm-3-container {
+    top: 40vh;
+    left: 85vw;
+}
+
+#worms-right .worm-4-container {
+    top: 60vh;
+    left: 80vw;
+}
+
+#worms-right .worm-5-container {
+    top: 80vh;
+    left: 75vw;
+}
+
+.worm {
+    position: fixed;
+    height: calc(20vh - 5px);
+    width: calc(20vh - 5px);
+    fill: #80CBC4;
+}
+
+#worms-right .worm {
+    transform: rotate(180deg);
+}
+
+#worms-left .worm-1 {
+    top: 0;
+    right: 75vw;
+}
+
+#worms-left .worm-2 {
+    top: 20vh;
+    right: 80vw;
+}
+
+#worms-left .worm-3 {
+    top: 40vh;
+    right: 85vw;
+}
+
+#worms-left .worm-4 {
+    top: 60vh;
+    right: 90vw;
+}
+
+#worms-left .worm-5 {
+    top: 80vh;
+    right: 95vw;
+}
+
+#worms-right .worm-1 {
+    top: 0;
+    left: 95vw;
+}
+
+#worms-right .worm-2 {
+    top: 20vh;
+    left: 90vw;
+}
+
+#worms-right .worm-3 {
+    top: 40vh;
+    left: 85vw;
+}
+
+#worms-right .worm-4 {
+    top: 60vh;
+    left: 80vw;
+}
+
+#worms-right .worm-5 {
+    top: 80vh;
+    left: 75vw;
+}
+
+/*** END WORMS ***/
+
+@media all and (max-width: 1200px) {
+
+    html {
+        font-size: 150%;
+    }
+
+    #main-column {
+        max-width: 90%;
+    }
+
+    #worms {
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,41 @@
+{% extends "base.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="css/chat">
+{% endblock %}
+
+{% block content %}
+    <div id="chat" v-pre>
+        <div id="main-column">
+            <yac-title-set v-bind:yac-titles="[
+                {
+                    titleHead: '{{ roomName | slice(0,1) }}',
+                    titleTail: '{{ roomName | slice(1, roomName | length - 1) }}'
+                },
+                {
+                    titleHead: 'l',
+                    titleTail: 'et\'s talk'
+                }
+            ]"></yac-title-set>
+            <div id="messages">
+                <message v-for="message in messages"
+                v-bind:msg-name="message.name"
+                v-bind:msg-content="message.content"></message>
+            </div>
+        </div>
+        <div id=""></div>
+        <div id="sender">
+            <input type="hidden" id="room-id" value="{{ roomId }}">
+            <input type="hidden" id="message-name" value="{{ name }}">
+            <div id="text-container">
+                <textarea id="message-text" name="content"></textarea>
+                <button type="submit" class="yac-button" id="send-button" v-on:click="postMessage">SEND</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/chat" type="module"></script>
+{% endblock %}

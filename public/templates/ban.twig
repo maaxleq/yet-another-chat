@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="/css/ban" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div id="main-column">
+        <p id="uh-oh">Uh-Oh! Looks like someone got banned</p>
+        <img src="/png/umad">
+        <div id="reason">
+            <p id="why">Why am I banned ?</p>
+            <p id="because">> {{ reason }}</p>
+        </div>
+    </div>
+{% endblock %}

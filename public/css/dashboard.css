@@ -1,0 +1,24 @@
+.room-button {
+    position: relative;
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.room-button img {
+    visibility: hidden;
+    position: absolute;
+    height: 1.5rem;
+    right: 10px;
+    top: 0.5rem;
+}
+
+.room-button:hover img, .room-button:focus img {
+    visibility: visible;
+}
+
+#sofa {
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

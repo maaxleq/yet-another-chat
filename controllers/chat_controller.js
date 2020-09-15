@@ -40,9 +40,10 @@ router.get("/get_messages/:room_id", (req, res) => {
     },{
         limit: 50,
         sort: {
-            datetime: 1
+            datetime: -1
         }
     }).then( docs => {
+        docs.reverse()
         res.json(docs)
     })
     .catch(error => {

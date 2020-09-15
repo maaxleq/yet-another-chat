@@ -1,9 +1,37 @@
+.yac-title-set {
+    height: 10rem;
+}
+
+#messages-wrapper {
+    position: relative;
+}
+
 #messages {
+    position: relative;
     font-family: "Poppins";
     display: block;
     margin: 0 auto;
     width: 40vw;
-    margin-bottom: 22vh;
+    max-height: calc(100vh - 16rem - 22vh);
+    overflow-y: auto;
+}
+
+.chat-blur {
+    position: absolute;
+    left: calc(50% - 20.5vw);
+    width: 41vw;
+    height: 20px;
+    z-index: 999;
+    background: #E8F5E9;
+    filter: blur(15px);
+}
+
+#chat-blur-top {
+    top: 0;
+}
+
+#chat-blur-bottom {
+    bottom: 0;
 }
 
 .message {
@@ -12,6 +40,14 @@
     border-radius: 5px;
     margin-bottom: 20px;
     box-shadow: 3px 3px #388E3C;
+}
+
+.message:first-of-type {
+    margin-top: 30px;
+}
+
+.message:last-of-type {
+    margin-bottom: 30px;
 }
 
 .message p {
@@ -25,11 +61,9 @@
 }
 
 #sender {
-    position: fixed;
+    margin: 1vh auto;
     width: 44vw;
-    bottom: 0;
     height: 20vh;
-    left: 28vw;
 }
 
 #text-container {

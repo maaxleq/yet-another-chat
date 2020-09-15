@@ -21,6 +21,10 @@ html {
     background-color: #E8F5E9;
 }
 
+body {
+    height: 100%;
+}
+
 body * {
     box-sizing: border-box;
 }
@@ -32,8 +36,8 @@ body * {
 }
 
 #main-column > * {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 input, textarea {

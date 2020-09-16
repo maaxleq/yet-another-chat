@@ -12,7 +12,7 @@
     display: block;
     margin: 0 auto;
     width: 40vw;
-    max-height: calc(100vh - 16rem - 22vh);
+    height: calc(100vh - 16rem - 12vh);
     overflow-y: auto;
 }
 
@@ -63,7 +63,7 @@
 #sender {
     margin: 1vh auto;
     width: 44vw;
-    height: 20vh;
+    height: 10vh;
 }
 
 #text-container {
@@ -76,7 +76,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    height: calc(20vh - 2px);
+    height: calc(10vh - 2px);
     border-radius: 5px;
     font-family: "Poppins";
     border: 2px solid #4CAF50;

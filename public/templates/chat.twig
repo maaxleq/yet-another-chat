@@ -30,7 +30,7 @@
                 <input type="hidden" id="room-id" value="{{ roomId }}">
                 <input type="hidden" id="message-name" value="{{ name }}">
                 <div id="text-container">
-                    <textarea id="message-text" name="content" v-on:focus="scrollToBottom"></textarea>
+                    <textarea id="message-text" name="content" v-on:focus="forceScroll" placeholder="Type your message here"></textarea>
                     <button type="submit" class="yac-button" id="send-button" v-on:click="postMessage">SEND</button>
                 </div>
             </div>

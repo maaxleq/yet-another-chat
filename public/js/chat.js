@@ -25,7 +25,7 @@ new Vue({
         scrollToBottom: function(){
             $("#messages").animate({
                 scrollTop: $("#messages")[0].scrollHeight
-            }, 500)
+            }, 1)
         },
         focusOnSender: function(){
             $("#message-text").focus()
@@ -70,22 +70,20 @@ new Vue({
             })
         },
         forceScroll: function(){
+            let initialScroll = $("#messages")[0].scrollTop
+
             let interval = setInterval(() => {
                 this.scrollToBottom()
 
-                if ($("#messages")[0].scrollTop != 0){
+                if ($("#messages")[0].scrollTop != initialScroll){
                     clearInterval(interval)
                 }
-            }, 50)
+            }, 1)
         }
     },
     mounted(){
         this.getMessages()
         this.poll()
-
-        this.$nextTick(() => {
-            this.scrollToBottom()
-        })
 
         this.forceScroll()
     },
@@ -95,7 +93,7 @@ new Vue({
                 this.messages[index].content = this.messages[index].content.trim()
             })
 
-            this.scrollToBottom()
+            this.forceScroll()
         }
     }
 })
